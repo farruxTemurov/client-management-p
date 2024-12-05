@@ -1,1 +1,25 @@
-<p>meeting-schedule works!</p>
+<main *ngIf="!isFormSubmitted">
+    <h1>Schedule a Meeting</h1>
+    <form (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label for="tname">Meeting Topic</label>
+            <input type="text" id="tname" name="tname" [(ngModel)]="tname" required />
+            <div class="error-message">{{ errorMessages.tname }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="pnum">Number of People</label>
+            <input type="number" id="pnum" name="pnum" [(ngModel)]="pnum" min="2" required />
+            <div class="error-message">{{ errorMessages.pnum }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="due-date">Start Time</label>
+            <input type="datetime-local" id="due-date" name="due-date" [(ngModel)]="dueDate" required />
+            <div class="error-message">{{ errorMessages.dueDate }}</div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+

@@ -7,6 +7,9 @@ import { MeetingScheduleComponent } from './meeting-schedule/meeting-schedule.co
 import { TaskAssignmentComponent } from './task-assignment/task-assignment.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { LoginComponent } from './login/login.component';
     MeetingScheduleComponent,
     TaskAssignmentComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
