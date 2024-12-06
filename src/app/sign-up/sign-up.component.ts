@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  // Import Router
 
 @Component({
   selector: 'app-sign-up',
@@ -16,7 +17,7 @@ export class SignUpComponent implements OnInit {
     password: ''
   };
 
-  constructor() { }
+  constructor(private router: Router) { }  // Inject Router
 
   ngOnInit(): void { }
 
@@ -26,6 +27,9 @@ export class SignUpComponent implements OnInit {
       // Form submission logic goes here
       alert('Form submitted successfully!');
       this.isFormSubmitted = true;  // Hide the form and show the success message
+
+      // Redirect to the home page (MainComponent)
+      this.router.navigate(['/']);
     }
   }
 

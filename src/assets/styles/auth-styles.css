@@ -79,6 +79,6 @@ button:hover {
 
 @media (max-width: 48rem) {
     form {
-        max-width: 25rem;
+        max-width: 20rem;
     }
 }

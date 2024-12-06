@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  closeDrawer() {
+    document.getElementById('side-drawer')!.style.display = 'none';
+  }
 }

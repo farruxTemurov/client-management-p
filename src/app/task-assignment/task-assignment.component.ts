@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';  // Import Router
 
 @Component({
   selector: 'app-task-assignment',
@@ -16,11 +17,17 @@ export class TaskAssignmentComponent {
     dueDate: ''
   };
 
+  constructor(private router: Router) { }  // Inject Router
+
+
   // Method to handle form submission
   onSubmit(): void {
     if (this.validateForm()) {
       this.isFormSubmitted = true; // Set form submission flag to true
       alert('Task Assigned successfully!');
+
+      // Redirect to the home page (MainComponent)
+      this.router.navigate(['/']);
     }
   }
 

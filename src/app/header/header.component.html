@@ -2,8 +2,8 @@
     <a href="/" id="logo">CMS</a>
     <nav>
         <ul>
-            <li><a routerLink="/signup" skipLocationChange="true">Sign up</a></li>
-            <li><a routerLink="/login" skipLocationChange="true">Login</a></li>
+            <li><a routerLink="/signup" (click)="closeDrawer()">Sign up</a></li>
+            <li><a routerLink="/login" (click)="closeDrawer()">Login</a></li>
         </ul>
     </nav>
     <a href="#side-drawer" class="menu-btn">
@@ -22,8 +22,8 @@
     </header>
     <nav>
         <ul>
-            <li><a routerLink="/signup" skipLocationChange="true">Sign up</a></li>
-            <li><a routerLink="/login" skipLocationChange="true">Login</a></li>
+            <li><a routerLink="/signup" (click)="closeDrawer()">Sign up</a></li>
+            <li><a routerLink="/login" (click)="closeDrawer()">Login</a></li>
         </ul>
     </nav>
 </aside>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';  // Import Router
 
 @Component({
   selector: 'app-meeting-schedule',
@@ -16,11 +17,16 @@ export class MeetingScheduleComponent {
     dueDate: ''
   };
 
+  constructor(private router: Router) { }  // Inject Router
+
   onSubmit(): void {
     if (this.validateForm()) {
       this.isFormSubmitted = true; // Set form submission flag to true
       console.log('Form submitted:', this.isFormSubmitted); // Debugging log
       alert('Meeting scheduled successfully!');
+
+      // Redirect to the home page (MainComponent)
+      this.router.navigate(['/']);
     }
   }
 
